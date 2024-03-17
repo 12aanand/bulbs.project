@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb function </title>
+</head>
+<style>
+    button{
+        padding: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        font-size: 30px;
+        color: blue;
+    
+    }
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 400px;
+        width: 300px;
+    }
+</style>
+ <body>
+    <h3>bulb function</h3>
+    <img id="bulb"  src="img/bulb-off.jpg" alt="" class="center">
+    <button id="toogle">turn on</button>
+
+    <script>
+        const bulb = document.getElementById('bulb')
+        const btn = document.getElementById('toogle')
+        btn.addEventListener('click', bulglow)
+
+        function bulglow(e){
+            if(btn.textContent.includes('on')){
+                bulb.src = "img/bulb-on.jpg" 
+                btn.textContent = "turn off"
+            }else{
+                bulb.src = "img/bulb-off.jpg" 
+                btn.textContent = "turn on"
+
+            }
+           
+           
+        } 
+
+    </script>
+</body>
+</html>
